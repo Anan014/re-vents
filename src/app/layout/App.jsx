@@ -1,12 +1,17 @@
-import EventDashboard from '../../features/events/EventDashboard';
+import React, { Fragment } from 'react';
+import { Container } from 'semantic-ui-react';
+import EventDashboard from '../../features/events/eventDashBoard/EventDashboard';
+import NavBar from '../../features/nav/NavBar';
 import './styles.css';
 
 function App() {
   return (
-    <div>
-      <h1>Re-vents</h1>
-      <EventDashboard />
-    </div>
+    <Fragment>
+      <NavBar />
+      <Container className='main'>
+        <EventDashboard />
+      </Container>
+    </Fragment>
   );
 }
 
